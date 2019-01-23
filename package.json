@@ -1,0 +1,35 @@
+{
+  "name": "sloth-ts-injection",
+  "version": "1.0.0",
+  "description": "Sloth Dependency Injection For Typescript",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest -c ./src/tests/config.js",
+    "lint": "tslint --project ./tsconfig.json -c ./tslint.json ./src/**/*.ts",
+    "lint-fix": "tslint  --fix --project ./tsconfig.json -c ./tslint.json ./src/**/*.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImOverlord/sloth-ts-injection.git"
+  },
+  "keywords": [],
+  "author": "ImOverlord <ImOverlord@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ImOverlord/sloth-ts-injection/issues"
+  },
+  "homepage": "https://github.com/ImOverlord/sloth-ts-injection#readme",
+  "devDependencies": {
+    "@types/jest": "^23.3.10",
+    "@types/node": "^10.12.14",
+    "coveralls": "^3.0.2",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.11.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.1.12"
+  }
+}
