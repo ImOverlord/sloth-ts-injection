@@ -34,7 +34,7 @@ $ npm install sloth-ts-injection reflect-metadata --save
 You can declare dependencies with @slothInject() decorator.
 
 ```ts
-import { slothInject } from '../../injector';
+import { slothInject } from 'sloth-ts-injection';
 
 @slothInject()
 export class DependencyA {
@@ -45,13 +45,13 @@ export class DependencyA {
 You can then require this dependency.
 
 ```ts
-import { slothInject } from '../../injector';
-import { DependencyA } from "./dependencyA.mock";
+import { slothInject } from 'sloth-ts-injection';
+import { DependencyA } from "./dependencyA";
 
 @slothInject()
 export class DependencyD {
 
-    constructor(public a: DependencyA) { }
+    constructor(public a: DependencyA   ) { }
 
     public update() {
         this.a.data++;
@@ -62,6 +62,9 @@ export class DependencyD {
 sloth-ts-injection will resolve the dependencies needed for you
 
 ```ts
+import { Injector } from 'sloth-ts-injection';
+
+const injector = new Injector();
 const dep: DependencyD = injector.inject(DependencyD);
 
 dep.update();
