@@ -2,7 +2,7 @@
   "name": "sloth-ts-injection",
   "version": "1.0.0",
   "description": "Sloth Dependency Injection For Typescript",
-  "main": "index.js",
+  "main": "dist/injector.js",
   "scripts": {
     "build": "tsc",
     "test": "jest -c ./src/tests/config.js",
