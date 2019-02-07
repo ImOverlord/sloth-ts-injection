@@ -20,6 +20,13 @@ describe("Basic Injection Test", () => {
         expect(dep).toBeInstanceOf(DependencyA);
     });
 
+    it("Should Add 2 times the same dependency", () => {
+        injector.register('DependencyA', DependencyA);
+        injector.register('DependencyA', DependencyA);
+
+        expect(injector['container'].length).toBe(1);
+    });
+
     it("Should register complex dependency", () => {
         const dep: DependencyD = injector.register("DependencyD", DependencyD);
 
@@ -47,8 +54,9 @@ describe("Basic Injection Test", () => {
     });
 
     it("Should register Mocks", () => {
-        const dep: DependencyA = injector.register("DependencyA", DependencyB);
+        injector.register("DependencyA", DependencyB);
 
+        const dep: DependencyA = injector.inject(DependencyA);
         expect(injector['container'].length).toBe(1);
         expect(dep).toBeInstanceOf(DependencyB);
     });
