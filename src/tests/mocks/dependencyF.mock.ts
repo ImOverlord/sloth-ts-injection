@@ -1,6 +1,6 @@
 import { slothInject } from '../../injector';
 
 @slothInject({
-    type: "name"
+    type: "plugin"
 })
-export class DependencyB { }
+export class DependencyF { }
