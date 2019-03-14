@@ -1,13 +1,13 @@
 {
   "name": "sloth-ts-injection",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Sloth Dependency Injection For Typescript",
   "main": "dist/injector.js",
   "scripts": {
     "build": "tsc",
     "test": "jest -c ./src/tests/config.js",
-    "lint": "tslint --project ./tsconfig.json -c ./tslint.json ./src/**/*.ts",
-    "lint-fix": "tslint  --fix --project ./tsconfig.json -c ./tslint.json ./src/**/*.ts"
+    "lint": "tslint --project ./tsconfig.json -c ./tslint.json ./src/*.ts",
+    "lint-fix": "tslint  --fix --project ./tsconfig.json -c ./tslint.json ./src/*.ts"
   },
   "repository": {
     "type": "git",
