@@ -10,8 +10,7 @@
     "lint-fix": "tslint  --fix --project ./tsconfig.json -c ./tslint.json ./src/*.ts",
     "clean": "rm -rf dist/",
     "publish-beta": "npm publish --tag beta",
-    "prepublish": "npm test && npm run lint",
-    "prepublish-beta": "npm test && npm run lint"
+    "prepublishOnly": "npm test && npm run lint"
   },
   "repository": {
     "type": "git",
